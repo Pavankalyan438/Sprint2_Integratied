@@ -1,0 +1,44 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<div class="container">
+    <table class="table table-striped" *ngIf="loandisbursals && loandisbursals.length > 0  else elseBlock">
+        <thead>
+        <tr>
+            <th>CUSTOMER ID</th>
+            <th>BANK BALANCE</th>
+            <th>LOAN TENURE</th>
+            <th>CREDIT SCORE</th>
+            <th>LOAN ROI</th>
+            <th>LOAN STATUS</th>
+            <th>LOAN TYPE</th>
+            <th>LOAN EMI</th>
+            <th>LOAN ID</th>
+            <th>PAY EMI(MONTH)</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of loandisbursals">
+                <td> {{e.accountId}} </td>
+                <td> Rs.{{e.loanAmount}} </td>
+                <td> {{e.loanTenure}} </td>
+                <td>{{e.creditScore}}</td>
+                <td> {{e.loanRoi}} </td>
+                <td> {{e.loanStatus}} </td>
+                <td> {{e.loanType}} </td>
+                <td> Rs.{{e.emi}} </td>
+                <td> {{e.loanId}} </td>
+                <td>
+                    <button type="button" class="btn btn-large btn-block btn-primary" (click)=updateBal(e)>PAY</button>
+                </td>
+                <td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #elseBlock>
+        <h4> There are no approved loans to display! </h4>
+    </ng-template>
+
+</div>
+<h3>{{message}}</h3>

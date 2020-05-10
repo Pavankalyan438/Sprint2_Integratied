@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Home for Loan Page</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<div class="container">
+  <h1 class="jumbotron jumbotron-fluid"> Welcome To Pecunia Bank Loan
+    Application</h1>
+
+    <nav class="s" class="navbar navbar-light" style="background-color: #e4eff0;">
+
+    <a class="navbar-brand" href=""></a>
+    <ul class="nav nav-pills">
+      <li class="nav-item ">
+        <a class="active" class="nav-link" class="btn btn-outline-secondary  btn-sm  mr-3" routerLink="loanreq"><i
+            class="fa fa-inr"></i>Loan Request</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" class="btn btn-outline-success btn-sm mr-3" routerLink="allloans"><i
+            class="fa fa-bank"></i>Get All Loan Requests</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" class="btn btn-outline-success btn-sm mr-3" routerLink="acceptloans"><i
+            class="fa fa-check"></i>Get Accepted Loans</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" class="btn btn-outline-danger btn-sm mr-3" routerLink="rejectloans"><i
+            class="fa fa-close"></i>Get Rejected Loans</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <br>
+
+  <router-outlet></router-outlet>
+</div>
+
+</html>
